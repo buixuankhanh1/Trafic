@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra kiến thức - Học biển báo giao thông</title>
+    <link rel="stylesheet" href="style.css"> <style>
+        /* CSS riêng cho trang kiểm tra kiến thức */
+        .quiz-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+            margin: 30px auto;
+            text-align: left; /* Đặt text-align về left cho nội dung câu hỏi */
+        }
+
+        .question {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .answers label {
+            display: block; /* Mỗi câu trả lời trên một dòng */
+            margin-bottom: 15px;
+            padding: 12px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .answers label:hover {
+            background-color: #dee2e6;
+        }
+
+        .answers input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .controls {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .controls button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin: 0 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .controls button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 30px;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-align: center;
+            color: #28a745; /* Màu xanh lá cây cho kết quả tốt */
+        }
+
+        .feedback.correct {
+            color: #28a745; /* Xanh lá */
+        }
+        .feedback.incorrect {
+            color: #dc3545; /* Đỏ */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Giới thiệu</a>
+        <a href="bienbaocam.html">Biển báo cấm</a>
+        <a href="bienbaohieulenh.html">Biển báo hiệu lệnh</a>
+        <a href="bienbaonguyhiem.html">Biển báo nguy hiểm</a>
+        <a href="bienbaophu.html">Biển báo phụ</a>
+        <a href="bienbaocaotoc.html">Biển báo cao tốc</a>
+        <a href="kiemtrakienthuc.html">Kiểm tra kiến thức</a>
+        <a href="#" id="dark-mode-toggle" style="float: right;">Chế độ tối</a>
+    </div>
+
+    <div class="container">
+        <h1>Kiểm tra kiến thức của bạn</h1>
+        <p>Hãy trả lời các câu hỏi dưới đây để xem bạn đã nắm vững các biển báo giao thông đến đâu nhé!</p>
+    </div>
+
+    <div class="quiz-container">
+        <div id="question-display">
+            <p class="question" id="current-question"></p>
+            <div class="answers" id="answer-options">
+                </div>
+            <p id="feedback" style="margin-top: 15px;"></p> </div>
+        
+        <div class="controls">
+            <button id="submit-btn">Kiểm tra</button>
+            <button id="next-btn" style="display: none;">Câu tiếp theo</button>
+            <button id="restart-btn" style="display: none;">Làm lại</button>
+        </div>
+        
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script> </body>
+</html>

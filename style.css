@@ -1,0 +1,197 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    border-radius: 4px;
+    margin: 6px 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.container {
+    padding: 20px;
+    text-align: center;
+}
+h1 {
+    color: #0056b3;
+}
+
+/* style.css */
+
+.intro-image {
+    max-width: 80%; /* Giúp hình ảnh không bị quá lớn so với trang */
+    height: auto; /* Giữ tỷ lệ khung hình của hình ảnh */
+    margin: 20px auto; /* Tạo khoảng cách và căn giữa hình ảnh */
+    display: block; /* Để margin auto hoạt động */
+    border-radius: 8px; /* Bo tròn các góc của hình ảnh */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng đổ bóng */
+}
+
+h2 {
+    color: #007bff; /* Màu sắc cho tiêu đề phụ */
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.intro-figure {
+    margin: 0 auto; /* Xóa margin mặc định của figure và căn giữa */
+    text-align: center; /* Căn giữa nội dung bên trong figure */
+}
+
+figcaption {
+    font-style: italic; /* In nghiêng chú thích */
+    color: #666; /* Màu xám cho chú thích */
+    margin-top: 5px; /* Khoảng cách giữa hình ảnh và chú thích */
+    font-size: 0.9em; /* Kích thước chữ nhỏ hơn một chút */
+}
+
+/* CSS dành cho các trang hiển thị biển báo */
+.sign-group {
+    display: grid; /* Sử dụng CSS Grid để tạo bố cục dạng lưới */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Tự động tạo cột, mỗi cột tối thiểu 250px */
+    gap: 20px; /* Khoảng cách giữa các ô */
+    padding: 20px;
+    max-width: 1200px; /* Giới hạn chiều rộng tối đa */
+    margin: 0 auto; /* Căn giữa nhóm biển báo */
+}
+
+.sign-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.sign-item img {
+    max-width: 150px; /* Kích thước tối đa cho hình ảnh biển báo */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.sign-item h3 {
+    color: #d9534f; /* Màu đỏ cho tiêu đề biển báo cấm, bạn có thể điều chỉnh sau cho các loại biển báo khác */
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.sign-item p {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* --- Dark Mode Styles --- */
+body.dark-mode {
+    background-color: #1a1a1a; /* Nền tối */
+    color: #e0e0e0; /* Chữ sáng */
+}
+
+body.dark-mode .navbar {
+    background-color: #333; /* Navbar tối hơn */
+}
+
+body.dark-mode .navbar a {
+    color: #f0f0f0; /* Chữ trên navbar sáng hơn */
+}
+
+body.dark-mode .navbar a:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+body.dark-mode .container,
+body.dark-mode .quiz-container,
+body.dark-mode .sign-item {
+    background-color: #2c2c2c; /* Nền các khối nội dung tối */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Đổ bóng tối hơn */
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: #78a9ff; /* Màu sắc tiêu đề sáng hơn, có thể điều chỉnh */
+}
+
+/* Điều chỉnh màu chữ của paragraph trong chế độ tối */
+body.dark-mode p {
+    color: #c0c0c0;
+}
+
+/* Các tùy chỉnh riêng cho biển báo cấm, hiệu lệnh, nguy hiểm, v.v. trong Dark Mode */
+/* Biển báo cấm trong Dark Mode */
+body.dark-mode .sign-item h3 {
+    color: #ff8a80; /* Màu đỏ nhạt hơn */
+}
+
+/* Biển báo nguy hiểm trong Dark Mode */
+body.dark-mode #bienbaonguyhiem .sign-item h3 { /* Sử dụng ID hoặc class cho body/container của trang đó */
+    color: #ffd180; /* Màu cam nhạt hơn */
+}
+/* Hoặc nếu bạn đã để CSS h3 trong từng file HTML thì cần chỉnh lại từng file */
+/* Ví dụ trong bienbaonguyhiem.html, bạn sẽ sửa: */
+/*
+body.dark-mode .sign-item h3 {
+    color: #ffd180;
+}
+*/
+
+/* Biển báo cao tốc trong Dark Mode */
+body.dark-mode #bienbaocaotoc .sign-item h3 { /* Sử dụng ID hoặc class cho body/container của trang đó */
+    color: #a7d97e; /* Màu xanh lá nhạt hơn */
+}
+/* Tương tự, nếu CSS h3 trong từng file HTML, bạn sẽ sửa: */
+/*
+body.dark-mode .sign-item h3 {
+    color: #a7d97e;
+}
+*/
+
+/* Chế độ tối cho các nhãn đáp án trong quiz */
+body.dark-mode .answers label {
+    background-color: #444;
+    color: #eee;
+}
+
+body.dark-mode .answers label:hover {
+    background-color: #555;
+}
+
+body.dark-mode .controls button {
+    background-color: #555;
+    color: #fff;
+}
+
+body.dark-mode .controls button:hover {
+    background-color: #777;
+}
+
+body.dark-mode #result {
+    color: #a7d97e; /* Màu xanh lá cho kết quả */
+}
+body.dark-mode .feedback.correct {
+    color: #a7d97e;
+}
+body.dark-mode .feedback.incorrect {
+    color: #ff8a80;
+}
